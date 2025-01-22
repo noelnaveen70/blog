@@ -9,7 +9,7 @@ const Home = () => {
    const[cardData,setData]=useState([]);
    const navigate=useNavigate();
    useEffect(()=>{
-      axiosInstance.get('http://localhost:7000/blog').then((res)=>{
+      axiosInstance.get('/api/blog').then((res)=>{
         setData(res.data);
       }).catch((error)=>{
         console.log(error)
